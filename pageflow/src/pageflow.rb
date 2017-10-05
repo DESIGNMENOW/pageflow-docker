@@ -14,6 +14,7 @@ Pageflow.configure do |config|
   
   # Adding Plugins
   config.page_types.register(Pageflow::EmbeddedVideo.page_type)
+  config.plugin(Pageflow::ExternalLinks.plugin)
 
   # Add custom themes by invoking the pageflow:theme generator and
   # registering the theme here.
