@@ -28,6 +28,12 @@ COPY ./src/database.yml /var/www/app/config
 COPY ./docker-cmd.sh /var/www/app/docker-cmd.sh
 COPY ./docker-entry-point.sh /var/www/app/docker-entry-point.sh
 
+COPY ./src/assets/stylesheets/themes/default.scss /var/www/app/assets/stylesheets/pageflow/themes/default.scss
+COPY ./src/assets/stylesheets/application.scss /var/www/app/assets/stylesheets/pageflow/application.scss
+COPY ./src/assets/stylesheets/editor.scss /var/www/app/assets/stylesheets/pageflow/editor.scss
+COPY ./src/assets/javascripts/application.js /var/www/app/assets/javascripts/pageflow/application.js
+COPY ./src/assets/javascripts/editor.js /var/www/app/assets/javascripts/pageflow/editor.js
+
 RUN chmod +x /var/www/app/docker-cmd.sh && \
     chmod +x /var/www/app/docker-entry-point.sh
 
